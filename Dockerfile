@@ -1,5 +1,4 @@
 ARG ALPINE_VERSION
-ARG MAVEN_VERSION
 
 FROM simaofsilva/openjdk11-alpine:${ALPINE_VERSION}
 
