@@ -1,5 +1,5 @@
 IMAGE_NAME=simaofsilva/maven-openjdk11-alpine
-ALPINE_VERSION=3.13.5
+ALPINE_VERSION=3.14.0
 MAVEN_VERSION=3.8.1
 
 build:
@@ -13,3 +13,4 @@ build:
 		--tag ${IMAGE_NAME}:latest \
 		--file Dockerfile \
 		.
+
