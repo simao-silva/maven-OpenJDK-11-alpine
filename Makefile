@@ -1,6 +1,6 @@
 IMAGE_NAME=simaofsilva/maven-openjdk11-alpine
 ALPINE_VERSION=3.14.0
-MAVEN_VERSION=3.8.1
+MAVEN_VERSION=3.8.2
 
 build:
 	DOCKER_CLI_EXPERIMENTAL=enabled \

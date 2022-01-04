@@ -1,6 +1,4 @@
-ARG ALPINE_VERSION
-
-FROM simaofsilva/openjdk11-alpine:${ALPINE_VERSION}
+FROM simaofsilva/openjdk11-alpine:3.15.0
 
 ARG MAVEN_VERSION
 ENV MAVEN_HOME=/usr/lib/mvn
