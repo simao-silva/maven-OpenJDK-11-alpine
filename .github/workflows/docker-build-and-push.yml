@@ -12,7 +12,7 @@ on:
 
 env:
   IMAGE_NAME: "simaofsilva/maven-openjdk11-alpine"
-  MAVEN_VERSION: "3.8.2"
+  MAVEN_VERSION: "3.8.4"
 
 jobs:
   build-and-push:
@@ -32,19 +32,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2    
-
-      - name: Read Dockerfile
-        id: dockerfile
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./Dockerfile
-
-      - name: Get alpine version for tag
-        id: version
-        shell: bash
-        run: |
-          echo "${{ steps.dockerfile.outputs.content }}" > /tmp/content.txt
-          echo "::set-output name=VERSION::$(head -n 1 /tmp/content.txt | awk '{print $2}' | cut -d : -f 2)"
 
       - name: Build and push
         uses: docker/build-push-action@v2
