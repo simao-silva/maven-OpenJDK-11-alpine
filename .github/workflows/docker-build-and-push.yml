@@ -1,14 +1,12 @@
-name: build and push container
+name: build and push image
 
 on:
   push:
     branches:
       - 'main'
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
+    paths:
+      - Dockerfile
+      - .github/workflows/docker-build-and-push.yml
 
 env:
   IMAGE_NAME: "simaofsilva/maven-openjdk11-alpine"
