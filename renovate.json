@@ -1,6 +1,12 @@
 {
   "extends": [
     "config:base",
-    ":dependencyDashboard"
+    ":disableDependencyDashboard"
+  ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "automergeType": "branch"
+    }
   ]
 }
