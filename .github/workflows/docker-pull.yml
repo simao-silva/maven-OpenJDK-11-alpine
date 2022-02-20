@@ -1,6 +1,12 @@
 name: "test pull request"
 
-on: [pull_request]
+on:
+  push:
+    branches-ignore:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
 
 env:
   IMAGE_NAME: "simaofsilva/maven-openjdk11-alpine"
