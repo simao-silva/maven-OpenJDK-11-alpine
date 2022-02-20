@@ -10,5 +10,16 @@
       "automergeType": "branch"
     }
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^\\.github\\/workflows\\/[^/]+\\.ya?ml$"
+      ],
+      "matchStrings": [
+        ".*VERSION: .(?<currentValue>.*). # renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>.*?))?\\n"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
 }

@@ -5,6 +5,7 @@ on: [pull_request]
 env:
   IMAGE_NAME: "simaofsilva/maven-openjdk11-alpine"
   TAG: "test"
+  MAVEN_VERSION: "3.8.4" # renovate: datasource=maven depName=org.apache.maven:maven
 
 jobs:
   build:
@@ -26,8 +27,9 @@ jobs:
           platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.TAG }}
+          build-args: |
+            MAVEN_VERSION=${{ env.MAVEN_VERSION }}
 
       - name: Test image
         run: |
           docker run --rm ${{ env.IMAGE_NAME }}:${{ env.TAG }} mvn --version
-
