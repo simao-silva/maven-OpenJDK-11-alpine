@@ -6,9 +6,16 @@
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "digest"],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest"
+      ],
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "pr"
     }
   ],
   "platformAutomerge": true,
@@ -22,5 +29,8 @@
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
-  ]
+  ],
+  "docker": {
+    "pinDigests": true
+  }
 }
