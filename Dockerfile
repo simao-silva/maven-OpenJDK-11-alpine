@@ -1,4 +1,4 @@
-FROM simaofsilva/openjdk11-alpine:11.0.25@sha256:e3232ccc7d7b8563c2b483d8f62471d55cbf1f3ebc691cb4c688d39f92f84c5a
+FROM simaofsilva/openjdk11-alpine:11.0.26@sha256:63e64709ecbe302e8de7e195d53b96eb9111ada80d9f70fbb1aec58a06f45b29
 
 ARG MAVEN_VERSION
 ENV MAVEN_HOME=/usr/lib/mvn
