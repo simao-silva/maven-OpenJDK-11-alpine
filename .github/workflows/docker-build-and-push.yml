@@ -10,7 +10,7 @@ on:
 
 env:
   IMAGE_NAME: "simaofsilva/maven-openjdk11-alpine"
-  MAVEN_VERSION: "3.9.9" # renovate: datasource=maven depName=org.apache.maven:maven
+  MAVEN_VERSION: "3.9.10" # renovate: datasource=maven depName=org.apache.maven:maven
 
 jobs:
   build-and-push:
